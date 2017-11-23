@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Hero }  from './hero'
 import { HeroService } from './hero.service';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'app-heroes',
@@ -14,6 +15,8 @@ export class HeroesComponent implements OnInit, OnDestroy {
 
   selectedHero: Hero;
 
+  private subscription: Subscription = new Subscription();
+  
   onSelect(hero: Hero): void {
     console.log("HeroesComponent:onSelect " + hero.name);
     this.selectedHero = hero;
@@ -22,8 +25,8 @@ export class HeroesComponent implements OnInit, OnDestroy {
   constructor(private heroService: HeroService) { }
 
   getHeroes(): void {
-    this.heroService.getHeroes()
-    .subscribe(heroes => this.heroes = heroes);
+    this.subscription.add(this.heroService.getHeroes()
+    .subscribe(heroes => this.heroes = heroes));
   }
 
   ngOnInit() {
@@ -32,6 +35,6 @@ export class HeroesComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(){
     console.log("HeroesComponent:ngOnDestroy");
+    this.subscription.unsubscribe();
   } 
-
 }
