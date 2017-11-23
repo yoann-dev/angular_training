@@ -13,7 +13,6 @@ import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { HomeModule } from './home/home.module';
 import { AboutModule } from './about/about.module';
-import { HeroesComponent } from './heroes/heroes.component';
 
 @NgModule({
   imports: [
@@ -29,7 +28,7 @@ import { HeroesComponent } from './heroes/heroes.component';
     AboutModule,
     AppRoutingModule
   ],
-  declarations: [AppComponent, HeroesComponent],
+  declarations: [AppComponent],
   providers: [
   ],
   bootstrap: [AppComponent]
