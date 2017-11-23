@@ -1,0 +1,18 @@
+{
+  "generator-ngx-rocket": {
+    "version": "2.4.0",
+    "props": {
+      "appName": "angular-tour-of-heroes",
+      "target": [
+        "web"
+      ],
+      "pwa": false,
+      "ui": "material",
+      "auth": false,
+      "projectName": "angular-tour-of-heroes",
+      "packageManager": "npm",
+      "mobile": [],
+      "webview": []
+    }
+  }
+}

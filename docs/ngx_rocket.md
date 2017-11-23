@@ -20,4 +20,4 @@ And reply to asked questions (application name, responsive, GUI framework, authe
 * `npm run generate -- component <name>` to generate a new component. You can also use `npm run generate -- directive|pipe|service|class|module`.
 
 ## References
-* [Website generator-ngx-rocket](https://github.com/ngx-rocket/generator-ngx-rocket)
+* [GitHub generator-ngx-rocket](https://github.com/ngx-rocket/generator-ngx-rocket)
