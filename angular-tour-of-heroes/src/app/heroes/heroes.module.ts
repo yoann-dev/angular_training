@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { MaterialModule } from '../material.module';
 import { HeroesRoutingModule } from './heroes-routing.module';
 import { HeroesComponent } from './heroes.component';
+import { HeroDetailComponent } from './hero-detail.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { HeroesComponent } from './heroes.component';
     HeroesRoutingModule
   ],
   declarations: [
-    HeroesComponent
+    HeroesComponent,
+    HeroDetailComponent
   ]
 })
 export class HeroesModule { }

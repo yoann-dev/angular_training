@@ -1,0 +1,11 @@
+<mat-card *ngIf="hero">
+  <mat-card-content>
+        <mat-card-title>{{ hero.name }} Details</mat-card-title>
+          <div><span>id: </span>{{hero.id}}</div>
+          <div>
+            <label>name:
+              <input [(ngModel)]="hero.name" placeholder="name">
+            </label>
+          </div>
+    </mat-card-content>
+</mat-card>

@@ -1,9 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
-export class Hero {
-  id: number;
-  name: string;
-}
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Hero } from './hero'
 
 @Component({
   selector: 'app-heroes',
@@ -11,7 +7,7 @@ export class Hero {
   styleUrls: ['./heroes.component.scss']
 })
 
-export class HeroesComponent implements OnInit {
+export class HeroesComponent implements OnInit, OnDestroy {
 
   heroes: Hero[] = [
     { id: 11, name: 'Mr. Nice' },
@@ -37,5 +33,9 @@ export class HeroesComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  ngOnDestroy(){
+    console.log("HeroesComponent:ngOnDestroy");
+  } 
 
 }
