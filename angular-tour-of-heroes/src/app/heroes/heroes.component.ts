@@ -17,13 +17,19 @@ export class HeroesComponent implements OnInit, OnDestroy {
 
   private subscription: Subscription = new Subscription();
   
+  constructor(private heroService: HeroService) { }
+
   onSelect(hero: Hero): void {
     console.log("HeroesComponent:onSelect " + hero.name);
     this.selectedHero = hero;
   }
 
-  constructor(private heroService: HeroService) { }
-
+  onCreate(): void {
+    console.log("HeroesComponent:onCreate");
+    let hero : Hero = { id: 29, name : "test added"} ;
+    this.heroService.addHero(hero);
+  } 
+  
   getHeroes(): void {
     this.subscription.add(this.heroService.getHeroes()
     .subscribe(heroes => this.heroes = heroes));

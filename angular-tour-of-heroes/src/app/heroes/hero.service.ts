@@ -8,6 +8,8 @@ import { OnDestroy, OnInit } from '@angular/core';
 @Injectable()
 export class HeroService implements OnDestroy, OnInit {
 
+  current_heroes: Hero[] = HEROES;
+
   constructor() { }
 
   ngOnDestroy() {
@@ -19,6 +21,11 @@ export class HeroService implements OnDestroy, OnInit {
   } 
 
   getHeroes(): Observable<Hero[]> {
-    return of(HEROES);
+    return of(this.current_heroes);
   }
+
+  addHero(hero: Hero ) : void {
+    this.current_heroes.push(hero)
+  } 
+
 }
