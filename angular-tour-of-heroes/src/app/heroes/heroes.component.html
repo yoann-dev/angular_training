@@ -1,3 +1,23 @@
-<p>
-  heroes works!
-</p>
+<div class="container">
+  <mat-card *ngIf="selectedHero">
+    <mat-card-content>
+          <mat-card-title>{{ selectedHero.name | uppercase }} Details</mat-card-title>
+            <div><span>id: </span>{{selectedHero.id}}</div>
+            <div>
+              <label>name:
+                <input [(ngModel)]="selectedHero.name" placeholder="name">
+              </label>
+            </div>
+      </mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-content>
+      <mat-list>
+        <h3 mat-subheader>Heroes</h3>
+        <mat-list-item *ngFor="let hero of heroes" (click)="onSelect(hero)"> 
+          {{hero.name}}
+        </mat-list-item>
+      </mat-list>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,15 @@
+@import "~@angular/material/theming";
+
+.container {
+    text-align: center;
+    padding: 1rem;
+  }
+
+.mat-icon {
+    vertical-align: middle;
+}
+
+.mat-list-item:hover {
+    background-color:#2196f3;
+} 
+  
