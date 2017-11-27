@@ -1,0 +1,9 @@
+<mat-card *ngIf="messageService.messages.length">
+    <mat-card-content>
+        <mat-card-title>Messages</mat-card-title>
+        <button mat-raised-button (click)="messageService.clear()" >clear</button>
+        <mat-list dense>
+            <mat-list-item *ngFor='let message of messageService.messages'> {{message}} </mat-list-item>
+        </mat-list>
+    </mat-card-content>
+</mat-card>

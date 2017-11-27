@@ -4,13 +4,14 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { of } from 'rxjs/observable/of';
 import { OnDestroy, OnInit } from '@angular/core';
+import { MessageService } from './message.service'
 
 @Injectable()
 export class HeroService implements OnDestroy, OnInit {
 
   current_heroes: Hero[] = HEROES;
 
-  constructor() { }
+  constructor(private messageService: MessageService) { }
 
   ngOnDestroy() {
     console.log('HeroService destroy');
@@ -21,11 +22,7 @@ export class HeroService implements OnDestroy, OnInit {
   } 
 
   getHeroes(): Observable<Hero[]> {
+    this.messageService.add('HeroService: fetched heroes')
     return of(this.current_heroes);
   }
-
-  addHero(hero: Hero ) : void {
-    this.current_heroes.push(hero)
-  } 
-
 }

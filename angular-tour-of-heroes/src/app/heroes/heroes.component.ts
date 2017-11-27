@@ -12,9 +12,7 @@ import { Subscription } from 'rxjs/Subscription';
 export class HeroesComponent implements OnInit, OnDestroy {
 
   heroes: Hero[];
-
   selectedHero: Hero;
-
   private subscription: Subscription = new Subscription();
   
   constructor(private heroService: HeroService) { }
@@ -23,13 +21,7 @@ export class HeroesComponent implements OnInit, OnDestroy {
     console.log("HeroesComponent:onSelect " + hero.name);
     this.selectedHero = hero;
   }
-
-  onCreate(): void {
-    console.log("HeroesComponent:onCreate");
-    let hero : Hero = { id: 29, name : "test added"} ;
-    this.heroService.addHero(hero);
-  } 
-  
+ 
   getHeroes(): void {
     this.subscription.add(this.heroService.getHeroes()
     .subscribe(heroes => this.heroes = heroes));

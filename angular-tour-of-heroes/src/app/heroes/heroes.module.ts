@@ -8,8 +8,10 @@ import { MaterialModule } from '../material.module';
 import { HeroesRoutingModule } from './heroes-routing.module';
 import { HeroesComponent } from './heroes.component';
 import { HeroDetailComponent } from './hero-detail.component';
+import { MessagesComponent } from './messages.component'
 
-import { HeroService } from './hero.service'
+import { HeroService } from './hero.service';
+import { MessageService } from './message.service';
 
 @NgModule({
   imports: [
@@ -22,8 +24,9 @@ import { HeroService } from './hero.service'
   ],
   declarations: [
     HeroesComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
+    MessagesComponent
   ],
-  providers: [ HeroService ],
+  providers: [ HeroService, MessageService ],
 })
 export class HeroesModule { }
