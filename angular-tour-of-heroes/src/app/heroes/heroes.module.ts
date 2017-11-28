@@ -12,6 +12,7 @@ import { MessagesComponent } from './messages.component'
 
 import { HeroService } from './hero.service';
 import { MessageService } from './message.service';
+import { DashboardComponent } from './dashboard.component';
 
 @NgModule({
   imports: [
@@ -25,7 +26,8 @@ import { MessageService } from './message.service';
   declarations: [
     HeroesComponent,
     HeroDetailComponent,
-    MessagesComponent
+    MessagesComponent,
+    DashboardComponent
   ],
   providers: [ HeroService, MessageService ],
 })

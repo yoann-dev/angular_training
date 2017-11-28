@@ -4,5 +4,7 @@
   "Hello world !": "Hello world !",
   "Home": "Home",
   "Version": "Version",
-  "Heroes" : "Heroes"
+  "Heroes" : "Heroes",
+  "Dashboard" : "Dashboard",
+  "Details" : "Details"
 }

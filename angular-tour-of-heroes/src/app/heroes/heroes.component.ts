@@ -12,15 +12,9 @@ import { Subscription } from 'rxjs/Subscription';
 export class HeroesComponent implements OnInit, OnDestroy {
 
   heroes: Hero[];
-  selectedHero: Hero;
   private subscription: Subscription = new Subscription();
   
   constructor(private heroService: HeroService) { }
-
-  onSelect(hero: Hero): void {
-    console.log("HeroesComponent:onSelect " + hero.name);
-    this.selectedHero = hero;
-  }
  
   getHeroes(): void {
     this.subscription.add(this.heroService.getHeroes()

@@ -1,0 +1,20 @@
+@import "~@angular/material/theming";
+
+.container {
+    text-align: center;
+    padding: 1rem;
+}
+
+.mat-grid-tile {
+  background-color: #2196f3;
+}
+
+.mat-grid-tile:hover {
+  background-color: gray;
+}
+
+a {
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}

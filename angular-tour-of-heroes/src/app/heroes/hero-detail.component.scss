@@ -1,3 +1,6 @@
-.mat-card {
-    margin-bottom: 10px;
+@import "~@angular/material/theming";
+
+.container {
+    text-align: center;
+    padding: 1rem;
 }
