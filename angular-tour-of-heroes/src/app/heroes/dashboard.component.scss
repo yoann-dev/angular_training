@@ -6,17 +6,17 @@
 }
 
 .element_grid {
-  background-color: #2196f3;
+  border: 0.1rem dashed #ddd;
   flex: 1;
   align-items: center;
   display: flex;
   justify-content: center;
-  color: white;
+  color: black;
   text-decoration: none;
-  font-weight: bold;
   height: 100%;
+  border-radius: 1rem;
 }
 
 .element_grid:hover {
-  background-color: gray;
+  background-color: #ddd;
 }

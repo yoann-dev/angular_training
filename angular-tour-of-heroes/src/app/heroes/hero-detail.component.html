@@ -2,11 +2,13 @@
   <mat-card *ngIf="hero">
     <mat-card-content>
           <mat-card-title>{{ hero.name }} Details</mat-card-title>
-            <div><span>id: </span>{{hero.id}}</div>
-            <div>
-              <label>name:
-                <input [(ngModel)]="hero.name" placeholder="name">
-              </label>
+          <div class="form-container">
+              <mat-form-field>
+                  <input matInput placeholder="Heroe ID" [readonly]="true" [(ngModel)]="hero.id"/>
+              </mat-form-field>
+              <mat-form-field color="primary">
+                  <input matInput placeholder="Hero Name" [(ngModel)]="hero.name"/>
+              </mat-form-field>
             </div>
       </mat-card-content>
       <button mat-raised-button (click)="goBack()" >Go Back</button>

@@ -5,7 +5,15 @@
     padding: 1rem;
   }
 
+.mat-list-item {
+    border-bottom: 1px solid #ddd
+}
+
 .mat-list-item:hover {
-    background-color:#2196f3;
+    background-color:#ddd;
 } 
+
+a {
+    text-decoration: none;
+}
   
