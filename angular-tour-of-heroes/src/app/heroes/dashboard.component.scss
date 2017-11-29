@@ -5,16 +5,18 @@
     padding: 1rem;
 }
 
-.mat-grid-tile {
+.element_grid {
   background-color: #2196f3;
-}
-
-.mat-grid-tile:hover {
-  background-color: gray;
-}
-
-a {
-  font-weight: bold;
-  text-decoration: none;
+  flex: 1;
+  align-items: center;
+  display: flex;
+  justify-content: center;
   color: white;
+  text-decoration: none;
+  font-weight: bold;
+  height: 100%;
+}
+
+.element_grid:hover {
+  background-color: gray;
 }
