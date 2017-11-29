@@ -12,8 +12,9 @@ import { HeroService }  from './hero.service';
 })
 export class HeroDetailComponent implements OnInit {
   @Input() hero: Hero;
+  public display_alert: Boolean = false;
 
-  constructor( private route: ActivatedRoute,
+  constructor(private route: ActivatedRoute,
     private heroService: HeroService,
     private location: Location) { }
 
@@ -29,5 +30,10 @@ export class HeroDetailComponent implements OnInit {
 
   goBack() : void {
     this.location.back();
+  }
+
+  save(): void {
+    this.heroService.updateHero(this.hero)
+      .subscribe(() => this.display_alert = true);
   }
 }

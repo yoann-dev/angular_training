@@ -4,6 +4,8 @@ import { TranslateModule } from '@ngx-translate/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { MaterialModule } from '../material.module';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
 import { CoreModule } from '../core/core.module';
 import { SharedModule } from '../shared/shared.module';
 import { HomeRoutingModule } from './home-routing.module';
@@ -17,7 +19,8 @@ import { HomeComponent } from './home.component';
     SharedModule,
     FlexLayoutModule,
     MaterialModule,
-    HomeRoutingModule
+    NgbModule,
+    HomeRoutingModule,
   ],
   declarations: [
     HomeComponent

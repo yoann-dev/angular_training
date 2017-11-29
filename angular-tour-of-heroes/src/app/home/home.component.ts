@@ -9,6 +9,8 @@ import { finalize } from 'rxjs/operators';
 })
 
 export class HomeComponent implements OnInit {
+
+  private closed_alert = false;
   constructor() {}
 
   ngOnInit() {}
