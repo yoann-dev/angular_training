@@ -1,7 +1,4 @@
 <div class="container">
-    <ngb-alert type="info" *ngIf="display_alert" (close)="display_alert=false">
-        <strong>Success!</strong> Heroes updated !!!
-    </ngb-alert>
   <mat-card *ngIf="hero">
     <mat-card-content>
           <mat-card-title>{{ hero.name }} Details</mat-card-title>
@@ -14,7 +11,7 @@
               </mat-form-field>
             </div>
       </mat-card-content>
-      <button mat-raised-button (click)="goBack()" >Go Back</button>
+      <button mat-raised-button (click)="goBack()" color="warn" >Go Back</button>
       <button mat-raised-button (click)="save()" >Save</button>
   </mat-card>
 </div>

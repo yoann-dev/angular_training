@@ -5,7 +5,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule } from '@angular/forms';
 
 import { MaterialModule } from '../material.module';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { HeroesRoutingModule } from './heroes-routing.module';
 import { HeroesComponent } from './heroes.component';
@@ -23,7 +22,6 @@ import { DashboardComponent } from './dashboard.component';
     TranslateModule,
     FlexLayoutModule,
     MaterialModule,
-    NgbModule,
     HeroesRoutingModule
   ],
   declarations: [

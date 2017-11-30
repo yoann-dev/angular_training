@@ -12,7 +12,6 @@ import { HeroService }  from './hero.service';
 })
 export class HeroDetailComponent implements OnInit {
   @Input() hero: Hero;
-  public display_alert: Boolean = false;
 
   constructor(private route: ActivatedRoute,
     private heroService: HeroService,
@@ -34,6 +33,6 @@ export class HeroDetailComponent implements OnInit {
 
   save(): void {
     this.heroService.updateHero(this.hero)
-      .subscribe(() => this.display_alert = true);
+      .subscribe(() => this.goBack());
   }
 }
