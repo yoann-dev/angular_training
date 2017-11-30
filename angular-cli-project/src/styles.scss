@@ -1,0 +1,39 @@
+// Angular Material theming
+@import "~@angular/material/theming";
+
+// Materials Icons
+@import "~material-design-icons/iconfont/material-icons.css";
+
+// Prebuild theme for material
+//@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+//@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+//@import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+@import "~@angular/material/prebuilt-themes/purple-green.css";
+
+// // Define own theme colors
+// $app-primary: mat-palette($mat-yellow);
+// $app-accent:  mat-palette($mat-blue, A200, A100, A400);
+// $app-warn:    mat-palette($mat-red);
+
+// // Create the theme object (a Sass map containing all of the palettes).
+// $app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+
+// Include the common styles for Angular Material
+@include mat-core();
+
+// // Include theme styles for core and each component used in your app.
+// // Alternatively, you can import and @include the theme mixins for each component
+// // that you are using.
+// @include angular-material-theme($app-theme);
+
+* {
+    box-sizing: border-box;
+  }
+
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  height: 100%;
+}  

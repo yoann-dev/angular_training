@@ -1,0 +1,95 @@
+<div fxFlex>
+  <mat-sidenav-container fxFill>
+    <mat-sidenav #sidenav [mode]="'side'" [opened]="true" ngClass.gt-sm="has-border">
+      <mat-toolbar color="primary">
+        <span>APP_NAME</span>
+      </mat-toolbar>
+      <nav>
+        <mat-list>
+          <mat-divider></mat-divider>
+          <a mat-list-item routerLink="/home" routerLinkActive="active">
+            <span>Home</span>
+          </a>
+          <mat-divider></mat-divider>
+          <a mat-list-item routerLink="/about" routerLinkActive="active">
+            <span>About</span>
+          </a>
+          <mat-divider></mat-divider>
+        </mat-list>
+      </nav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <mat-toolbar color="primary">
+        <span>{{title}}</span>
+      </mat-toolbar>
+      <!-- <router-outlet></router-outlet> -->
+      <mat-card style="margin: 1rem">
+        <h1>My Maxi Card</h1>
+        <h3>Basic Buttons</h3>
+        <div class="button-row">
+          <button mat-button>Basic</button>
+          <button mat-button color="primary">Primary</button>
+          <button mat-button color="accent">Accent</button>
+          <button mat-button color="warn">Warn</button>
+          <button mat-button disabled>Disabled</button>
+          <a mat-button routerLink=".">Link</a>
+        </div>
+
+        <h3>Raised Buttons</h3>
+        <div class="button-row">
+          <button mat-raised-button>Basic</button>
+          <button mat-raised-button color="primary">Primary</button>
+          <button mat-raised-button color="accent">Accent</button>
+          <button mat-raised-button color="warn">Warn</button>
+          <button mat-raised-button disabled>Disabled</button>
+          <a mat-raised-button routerLink=".">Link</a>
+        </div>
+
+        <h3>Icon Buttons</h3>
+        <div class="button-row">
+          <button mat-icon-button>
+            <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+          </button>
+          <button mat-icon-button color="primary">
+            <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+          </button>
+          <button mat-icon-button color="accent">
+            <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+          </button>
+          <button mat-icon-button color="warn">
+            <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+          </button>
+          <button mat-icon-button disabled>
+            <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+          </button>
+        </div>
+
+        <h3>Fab Buttons</h3>
+        <div class="button-row">
+          <button mat-fab>Basic</button>
+          <button mat-fab color="primary">Primary</button>
+          <button mat-fab color="accent">Accent</button>
+          <button mat-fab color="warn">Warn</button>
+          <button mat-fab disabled>Disabled</button>
+          <button mat-fab>
+            <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+          </button>
+          <a mat-fab routerLink=".">Link</a>
+        </div>
+
+        <h3>Mini Fab Buttons</h3>
+        <div class="button-row">
+          <button mat-mini-fab>Basic</button>
+          <button mat-mini-fab color="primary">Primary</button>
+          <button mat-mini-fab color="accent">Accent</button>
+          <button mat-mini-fab color="warn">Warn</button>
+          <button mat-mini-fab disabled>Disabled</button>
+          <button mat-mini-fab>
+            <mat-icon aria-label="Example icon-button with a heart icon">favorite</mat-icon>
+          </button>
+          <a mat-mini-fab routerLink=".">Link</a>
+        </div>
+      </mat-card>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>
