@@ -33,7 +33,6 @@ export class HeroesComponent implements OnInit, OnDestroy {
   }
 
   public delete(hero: Hero): void {
-      console.log("HeroesComponent::delete " + hero.name);
       this.heroService.deleteHero(hero).subscribe(_ => {
         this.heroes = this.heroes.filter(h => h !== hero);
       });

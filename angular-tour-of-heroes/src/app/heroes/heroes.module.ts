@@ -8,12 +8,13 @@ import { MaterialModule } from '../material.module';
 
 import { HeroesRoutingModule } from './heroes-routing.module';
 import { HeroesComponent } from './heroes.component';
-import { HeroDetailComponent } from './hero-detail.component';
-import { MessagesComponent } from './messages.component'
+import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { MessagesComponent } from './messages/messages.component'
 
 import { HeroService } from './hero.service';
 import { MessageService } from './message.service';
 import { DashboardComponent } from './dashboard.component';
+import { HeroSearchComponent } from './hero-search/hero-search.component';
 
 @NgModule({
   imports: [
@@ -28,7 +29,8 @@ import { DashboardComponent } from './dashboard.component';
     HeroesComponent,
     HeroDetailComponent,
     MessagesComponent,
-    DashboardComponent
+    DashboardComponent,
+    HeroSearchComponent
   ],
   providers: [ HeroService, MessageService ],
 })

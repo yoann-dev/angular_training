@@ -5,7 +5,7 @@ import { Route } from '../core/route.service';
 import { extract } from '../core/i18n.service';
 import { HeroesComponent } from './heroes.component';
 import { DashboardComponent } from './dashboard.component'
-import { HeroDetailComponent } from './hero-detail.component'
+import { HeroDetailComponent } from './hero-detail/hero-detail.component'
 
 const routes: Routes = Route.withShell([
   { path: 'dashboard', component: DashboardComponent, data: { title: extract('Dashboard') } },
