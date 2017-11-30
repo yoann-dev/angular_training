@@ -1,11 +1,21 @@
 <div class="container">
+  <mat-card class="top">
+    <mat-card-title>Add new Hero</mat-card-title>
+    <mat-form-field>
+      <input matInput #heroName placeholder="Hero name">
+    </mat-form-field>
+    <button mat-raised-button (click)="add(heroName.value); heroName.value=''">Add</button>
+  </mat-card>
   <mat-card>
     <mat-card-content>
       <mat-list>
-        <h3 mat-subheader>Heroes</h3>
-        <a mat-list-item *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}"> 
-            {{hero.name}}
-        </a>
+        <h3 mat-subheader>Heroes List</h3>
+        <mat-list-item *ngFor="let hero of heroes">
+          <a class="hero_text" matLine routerLink="/detail/{{hero.id}}">{{hero.name}}</a>
+          <button mat-icon-button (click)="delete(hero)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-list-item>
       </mat-list>
     </mat-card-content>
   </mat-card>

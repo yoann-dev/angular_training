@@ -1,7 +1,11 @@
 .container {
     text-align: center;
     padding: 1rem;
-  }
+}
+
+.top {
+    margin-bottom: 1rem;
+}
 
 .mat-list-item {
     border-bottom: 1px solid #ddd
@@ -12,7 +16,8 @@
     background-color: rgba(103,58,183, 0.1);
 } 
 
-a {
+.hero_text {
     text-decoration: none;
+    color: black;
 }
   
