@@ -1,0 +1,37 @@
+<div class="container-fluid">
+  <h1>Employees List</h1>
+  <div class="list-group">
+    <a class="list-group-item list-group-item-action" *ngFor="let employ of employee_list" (click)="onSelect(employ)">
+      {{employ.first_name}} {{employ.last_name}}
+    </a>
+  </div>
+  <div class="spacer"></div>
+  <div *ngIf="display_edition">
+    <div class="row">
+      <div class="col-md-4">
+        <h2>Edit Employee</h2>
+      </div>
+      <div class="col-md-4 offset-md-4">
+        <button type="button" class="close" aria-label="Close" (click)="display_edition=false">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </div>
+    <form (ngSubmit)="edit()">
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" class="form-control" id="firstName" name="firstName" [(ngModel)]="selected_employee.first_name">
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" class="form-control" id="lastName" name="lastName" [(ngModel)]="selected_employee.last_name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email" name="email" [(ngModel)]="selected_employee.email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+</div>

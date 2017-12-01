@@ -1,0 +1,21 @@
+@import "../../theme/theme-variables";
+
+.logo {
+  width: 100px;
+}
+
+div.my_col1 {
+  background-color: $red;
+}
+
+div.my_col2 {
+  background-color: $blue;
+}
+
+div.my_col3 {
+  background-color: $green;
+}
+
+div.my_container {
+  padding-left: 1rem;
+}
