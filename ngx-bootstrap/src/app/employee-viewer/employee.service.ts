@@ -21,7 +21,7 @@ export class EmployeeService {
 
   /**
    * Class constructor
-   * @param httpClient - objet to interact with http 
+   * @param httpClient - objet to interact with http
    */
   constructor(private httpClient: HttpClient) { }
 
@@ -29,28 +29,28 @@ export class EmployeeService {
    * Get Employee observable
    */
   public getEmployees(): Observable<Employee[]> {
-    return this.httpClient.get<Employee[]>("http://127.0.0.1:3000/employees")
+    return this.httpClient.get<Employee[]>('http://127.0.0.1:3000/employees')
       .pipe(catchError(this.handleError('getHeroes', [])));
   }
 
-  /** 
-   * update the hero on the server 
+  /**
+   * update the hero on the server
    */
   public updateEmployees(employee: Employee): Observable<any> {
-    const url:string = "http://127.0.0.1:3000/employees/"+employee.id;
-    log.debug("EmployeeService::updateEmployees url " + url);
+    const url: string = 'http://127.0.0.1:3000/employees/' + employee.id;
+    log.debug('EmployeeService::updateEmployees url: ' + url);
     return this.httpClient.put(url, employee, httpOptions).pipe(
       catchError(this.handleError<any>('updateHero'))
     );
   }
 
   /**
- * Handle Http operation that failed.
- * Let the app continue.
- * @param operation - name of the operation that failed
- * @param result - optional value to return as the observable result
- */
-  private handleError<T>(operation = 'operation', result?: T) {
+   * Handle Http operation that failed.
+   * Let the app continue.
+   * @param operation - name of the operation that failed
+   * @param result - optional value to return as the observable result
+   */
+  private handleError<T>(operation: string = 'operation', result?: T) {
     return (error: any): Observable<T> => {
 
       // Send the error to remote logging infrastructure

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
 import { debounceTime } from 'rxjs/operator/debounceTime';
-import { EmployeeService, Employee } from './employee.service'
+import { EmployeeService, Employee } from './employee.service';
 
 @Component({
   selector: 'app-employee-viewer',
@@ -28,15 +28,15 @@ export class EmployeeViewerComponent implements OnInit {
     this.fill_employee_list();
 
     this._success.subscribe((message) => this.errorMessage = message);
-    debounceTime.call(this._success, 5000).subscribe(() => {this.errorMessage = null});
+    debounceTime.call(this._success, 5000).subscribe(() => { this.errorMessage = null; });
   }
 
   /**
    * Change error message
    */
-  private changeErrorMessage(updatedEmployee: Employee):void {
-    console.log("EmployeeViewerComponent:changeErrorMessage");
-    this._success.next("Unable to udpate employee, connection error...." + JSON.stringify(updatedEmployee));
+  private changeErrorMessage(updatedEmployee: Employee): void {
+    console.log('EmployeeViewerComponent:changeErrorMessage');
+    this._success.next('Unable to udpate employee, connection error....' + JSON.stringify(updatedEmployee));
   }
 
   /**
@@ -64,16 +64,15 @@ export class EmployeeViewerComponent implements OnInit {
    */
   private updateItem(updatedEmployee: Employee): void {
     if (updatedEmployee) { // si non undefined, undefined == erreur http
-      var foundIndex = this.employee_list.findIndex(x => x.id == updatedEmployee.id);
+      const foundIndex = this.employee_list.findIndex(x => x.id === updatedEmployee.id);
       this.employee_list[foundIndex] = updatedEmployee;
-    }
-    else {
+    } else {
       this.changeErrorMessage(this.selected_employee);
     }
   }
 
   /**
-   * Edit employee 
+   * Edit employee
    */
   public edit(): void {
     if (this.selected_employee) {
@@ -81,7 +80,7 @@ export class EmployeeViewerComponent implements OnInit {
       this.display_edition = false;
       this.employeeService.updateEmployees(this.selected_employee).subscribe(
         result => this.updateItem(result)
-      )
+      );
     }
   }
 }

@@ -1,10 +1,10 @@
-# Compare ngx-generator with angular-cli
+# Compare ngx-generator vs. angular-cli
 
-## Dependencies added by ng-generator
+## Dependencies added by ngx-generator
 * @ngx-translate/core : The internationalization (i18n) library for Angular.
 * lodash : The Lodash library exported as a UMD module.
 
-## Dev dependencies added by ng-generator
+## Dev dependencies added by ngx-generator
 * @biesbjerg/ngx-translate-extract : Extract translatable (ngx-translate) strings and save as a JSON or Gettext pot file.
 * @ngx-rocket/scripts : Support scripts for ngX-Rocket projects.
 * @types/lodash : TypeScript definitions for Lo-Dash.
